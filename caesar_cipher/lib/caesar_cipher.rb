@@ -6,7 +6,7 @@ class CaesarCipher
   end
 
   def codify(word, degree)
-    @caesar = word.split("").map! { |i| i == i.upcase ? (@alphabet_up[(@alphabet_up.index(i.ord) + degree) % 26]).chr : (@alphabet_down[(@alphabet_down.index(i.ord) + degree) % 26]).chr}
+    @caesar = word.split("").map! { |i| i =~ /\w/ ? (i == i.upcase ? (@alphabet_up[(@alphabet_up.index(i.ord) + degree) % 26]).chr : (@alphabet_down[(@alphabet_down.index(i.ord) + degree) % 26]).chr) : i }
     @caesar = @caesar.join
   end
 

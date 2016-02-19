@@ -34,6 +34,10 @@ describe CaesarCipher do
     caesar_cipher.codify("z",1)
     expect(caesar_cipher.result).to eq "a"
   end
-    
+
+  it "leaves punctuation, spaces, and numbers alone" do
+    caesar_cipher.codify("hi! you're cute.",1)    
+    expect(caesar_cipher.result).to eq "ij! zpv'sf dvuf."
+  end
 
 end
