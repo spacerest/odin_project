@@ -7,11 +7,11 @@ class CaesarCipher
   def codify(word, degree)
     @english = word 
     @caesar = @english.split("").map! { |i| @alphabet[@alphabet.index(i.ord + degree)].chr}
-    #@caesar.map! { |i| i.to_i.chr } 
+    @caesar = @caesar.join
   end
 
   def result
-    @caesar.join
+    @caesar
   end
 
 end

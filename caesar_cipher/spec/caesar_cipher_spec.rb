@@ -4,9 +4,6 @@ require 'caesar_cipher'
 describe CaesarCipher do
   let(:caesar_cipher) {CaesarCipher.new}
   w = "hello"
-  it "codify returns as an array" do
-    expect(caesar_cipher.codify(w,0).class).to eq Array 
-  end
 
   it "result returns as a string" do
     caesar_cipher.codify(w, 0)
