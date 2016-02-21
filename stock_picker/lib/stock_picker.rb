@@ -32,4 +32,3 @@ class StockPicker
   end
 end
 
-#for index in price array, find difference between index and all values that are higher and have a greater index
